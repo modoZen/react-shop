@@ -16,7 +16,7 @@ const App = ()=>{
                     <Route path="/login" element={<Login />} />
                     <Route path="/recovery-password" element={<RecoveryPassword />} />
                     <Route path="*" element={<NotFound />} />
-                    </Routes>
+                </Routes>
             </Layout>
         </BrowserRouter>
     );
