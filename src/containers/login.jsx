@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Login.scss';
 
 const Login = () => {
     return (
@@ -9,9 +10,9 @@ const Login = () => {
                 <h1 className="title">Create a new password</h1>
                 <p className="subtitle">Enter a new passwrd for yue account</p>
 
-                <form action="/" classNameName="form">
-                    <label for="password" classNameName="label">Password</label>
-                    <input type="password" id="password" placeholder="*********" classNameName="input input-password" />
+                <form action="/" className="form">
+                    <label for="password" className="label">Password</label>
+                    <input type="password" id="password" placeholder="*********" className="input input-password" />
 
                     <label for="new-password" className="label">Password</label>
                     <input type="password" id="new-password" placeholder="*********" className="input input-password" />
