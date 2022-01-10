@@ -6,9 +6,7 @@ import btAddToCart from '@icons/bt_add_to_cart.svg';
 const ProductItem = ({ product }) => {
 	const { addToCart } = useContext(AppContext);
 
-	const handlerClick = ({item})=>{
-		addToCart(item);
-	}
+	const handlerClick = item=>{addToCart(item);}
 	return (
 		<div className="ProductItem">
 			<img src={product.images[0]} alt={product.title} />
