@@ -12,25 +12,31 @@ import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
 import '../styles/global.css';
+import AppContext from '../context/AppContext';
+import '@styles/global.css';
+import useInitialState from '../hooks/useInitialState';
 
 const App = () => {
+	const initialState = useInitialState()
 	return (
-		<BrowserRouter>
-			<Layout>
-				<Routes>
-					<Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-					<Route exact path="/password-recovery" component={<PasswordRecovery />} />
-					<Route exact path="/send-email" component={<SendEmail />} />
-					<Route exact path="/new-password" component={<NewPassword />} />
-					<Route exact path="/account" component={<MyAccount />} />
-					<Route exact path="/signup" component={<CreateAccount />} />
-					<Route exact path="/checkout" component={<Checkout />} />
-					<Route exact path="/orders" component={<Orders />} />
-                    <Route path="*" element={<NotFound />} />
-				</Routes>
-			</Layout>
-		</BrowserRouter>
+		<AppContext.Provider value={initialState}>
+			<BrowserRouter>
+				<Layout>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/login" element={<Login />} />
+						<Route exact path="/password-recovery" component={<PasswordRecovery />} />
+						<Route exact path="/send-email" component={<SendEmail />} />
+						<Route exact path="/new-password" component={<NewPassword />} />
+						<Route exact path="/account" component={<MyAccount />} />
+						<Route exact path="/signup" component={<CreateAccount />} />
+						<Route exact path="/checkout" component={<Checkout />} />
+						<Route exact path="/orders" component={<Orders />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</Layout>
+			</BrowserRouter>
+		</AppContext.Provider>
 	);
 }
 
