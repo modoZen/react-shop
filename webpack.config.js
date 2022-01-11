@@ -6,9 +6,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: './src/index.js', // punto de entrada
     output: { // lugar al que saldrán todos los archivos
-        path: path.resolve(__dirname, 'dist'), //en nuestro path, crea la carpeta dist
-        filename: 'bundle.js' ,// nombre del archivo js resultante
-        publicPath:'/'
+        path: path.resolve(__dirname, 'build'), //en nuestro path, crea la carpeta dist
+        filename: 'react-shop/bundle.js' ,// nombre del archivo js resultante
+        publicPath:'/react-shop/'
     },
     mode:'development',
     resolve: { // extensión de archivos a tomar en cuenta
